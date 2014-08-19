@@ -104,6 +104,7 @@ class ListGemsCommand(sublime_plugin.WindowCommand):
               output = process.communicate()[0]
               if output != b'':
                   return output
+
     def sublime_command_line(self, args):
         args.insert(0, self.get_sublime_path())
         return subprocess.Popen(args)
@@ -117,10 +118,3 @@ class ListGemsCommand(sublime_plugin.WindowCommand):
                 break
         if matches == []: return None
         return os.path.dirname(matches[0])
-
-
-
-
-
-
-
