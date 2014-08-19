@@ -45,7 +45,9 @@ class ListGemsCommand(sublime_plugin.WindowCommand):
             gem_name = re.search(self.PATTERN_GEM_NAME,self.gem_list[picked]).group(1)
             output = self.run_subprocess("bundle show " + gem_name)
             if output != None:
-                self.sublime_command_line(['-n', output.rstrip()])
+                d = self.window.project_data()
+                d['folders'].append({'follow_symlinks':True, 'path': output.rstrip().decode("utf-8")})
+                self.window.set_project_data(d)
 
     def get_sublime_path(self):
         if sublime.platform() == 'osx':
