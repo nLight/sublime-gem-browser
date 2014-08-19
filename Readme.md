@@ -8,7 +8,7 @@ Tested on OSX with RVM, Xubuntu with rbenv and Windows with RubyInstaller
 # How to Use
 * In ST2, press "cmd + shift + p" and type "list gem" (or ctrl + shift + p if you're on Windows or Linux)
 * Once you see "Gem Browser: List Gems", press enter.
-* It will list all the gems that have been installed via bundle for the project folder 
+* It will list all the gems that have been installed via bundle for the project folder
   ![ScreenShot](https://dl.dropbox.com/u/1252099/semi-permanent/gembrowser.png)
 * Once you choose a gem of the list, this plugin will open the source of the gem in a new window with the code ready for inspection and EVEN modification in real time (useful for debugging).
 
